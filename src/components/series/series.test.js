@@ -27,7 +27,7 @@ const seriesData = [
 			},
 		},
 		releaseYear: 2016,
-		id: 'b4b8',
+		id: 'a6c4',
 	},
 	{
 		title: 'Acquitted',
@@ -42,7 +42,7 @@ const seriesData = [
 			},
 		},
 		releaseYear: 2015,
-		id: '3f57',
+		id: '26bd',
 	},
 	{
 		title: 'Almost Royal',
@@ -57,22 +57,7 @@ const seriesData = [
 			},
 		},
 		releaseYear: 2014,
-		id: '74e7',
-	},
-	{
-		title: 'Angie Tribeca ',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-		programType: 'series',
-		images: {
-			'Poster Art': {
-				url: 'https://streamcoimg-a.akamaihd.net/000/131/66/13166-PosterArt-d2a89999fa2d84015ba82a979e0ed796.jpg',
-				width: 1000,
-				height: 1500,
-			},
-		},
-		releaseYear: 2016,
-		id: '13ac',
+		id: 'e765',
 	},
 ];
 

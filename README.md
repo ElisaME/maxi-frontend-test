@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Maxi-Ms Frontend Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prueba técnica de front en donde se muestran 3 pantallas:
 
-## Available Scripts
+- Home
+- Series
+- Movies
 
-In the project directory, you can run:
+## 💻 Instalación de dependencias
 
-### `npm start`
+Para este proyecto se empleo Node en su versión `18.17.0`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para instalar las dependencias utiliza el comando
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+## 🚀 Ejecución del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para ejecutar este proyecto primero iniciamos JSON Server con el comando:
 
-### `npm run build`
+```bash
+npx json-server --port 4000 db.json
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En otra terminal ejecutamos el siguiente comando para iniciar nuestra aplicación:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para correr los test empleamos el comando:
 
-### `npm run eject`
+```bash
+npm test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Preguntas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. ¿Cómo decidió las opciones técnicas y arquitectónicas utilizadas como parte de su solución?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- JSON Server: decidí usar esta dependencia para simular como podría ser las peticiones a una API real, me parece una herramienta práctica para interactuar con mocks de data. De esta forma considero que se puede simular mejor como es que se construyen los endpoints y la data que se envía en las peticiones a los servicios.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Componentes reutilizables: decidí crear componentes que pudieran ser reutilizados con facilidad, entre ellos están los componentes `Layout`, `Navbar`, `Footer`, `HeaderTitle` esto con la finalidad de no repetir código y poder editarlos y mantenerlos con mayor facilidad.
 
-## Learn More
+- Tailwind CSS y Styled components: decidí usar estas librerías de estilos porque considero que pueden complementarse de buena manera, por una parte styled components nos permite crear componentes que son reutilizables y por otra parte Tailwind nos ofrece un conjunto de utilidades de estilo que pueden aplicarse de manera rápida. Considero que cuando tenemos un sistema de diseño grande y definido esta combinación puede ser escalable manteniendo la legibilidad del código.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Redux toolkit: decidí utilizar esta librería porque me parece que permite una estructura de archivos intuitiva y clara. Decidí crear 3 reducers: uno para las series, otro para las películas y otro para el modal que muestra el detalle de las dos anteriores. Con esta elección puedo acceder a los datos que necesito en las distintas pantallas de manera rápida.
+  También algo que elegí usar fueron los Async Thunks ya que quise mantener las llamadas a la "api" en los mismos reducers, considero que de esta manera es más claro lo que sucede.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. ¿Hay alguna mejora que pueda hacer en su envío?
+   Sí, considero que un área de mejora en este proyecto es la parte de los test, creo que es un área de oportunidad en mi formación profesional y considero que aún se pueden agregar casos que validen por completo el comportamiento de los componentes.
 
-### Code Splitting
+3. ¿Qué haría de manera diferente si se le asignara más tiempo?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Mejoraría el aspecto visual para construir un diseño más presentable y con una cohesión de estilos y colores.
+- Trabajar de mejor forma los styled components para construir componentes reutilizables más eficientes.
+- Construiría más pruebas unitarias.

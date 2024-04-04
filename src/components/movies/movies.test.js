@@ -27,7 +27,7 @@ const moviesData = [
 			},
 		},
 		releaseYear: 2015,
-		id: '11a3',
+		id: '59b1',
 	},
 	{
 		title: 'Ages Of Love',
@@ -42,7 +42,7 @@ const moviesData = [
 			},
 		},
 		releaseYear: 2010,
-		id: '38a7',
+		id: 'f0c2',
 	},
 	{
 		title: 'American Sniper',
@@ -57,22 +57,7 @@ const moviesData = [
 			},
 		},
 		releaseYear: 2015,
-		id: 'd36c',
-	},
-	{
-		title: 'Danny Collins',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-		programType: 'movie',
-		images: {
-			'Poster Art': {
-				url: 'https://streamcoimg-a.akamaihd.net/000/999/667/999667-PosterArt-65e6f88ede8bdcdad6d4d4f1549936ee.jpg',
-				width: 1000,
-				height: 1500,
-			},
-		},
-		releaseYear: 2014,
-		id: 'b33d',
+		id: '05a1',
 	},
 ];
 
