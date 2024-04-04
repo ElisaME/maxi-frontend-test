@@ -11,7 +11,7 @@ export const getSeries = (data) => {
 			}
 			return res.json();
 		})
-		.catch((error) => console.log('error', error));
+		.catch((error) => error.json());
 };
 
 export const getMovies = (data) => {
@@ -27,5 +27,5 @@ export const getMovies = (data) => {
 			}
 			return res.json();
 		})
-		.catch((error) => console.log('error', error));
+		.catch((error) => error.json());
 };

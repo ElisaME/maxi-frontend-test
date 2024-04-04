@@ -18,7 +18,7 @@ const Movies = () => {
   const [resultsPerPage, setResultsPerPage] = useState(10);
   const indexOfLastResult = currentPage * resultsPerPage;
   const indexOfFirstResult = indexOfLastResult - resultsPerPage;
-  const currentResults = movies.slice(indexOfFirstResult, indexOfLastResult)
+  const currentResults = movies && movies.slice(indexOfFirstResult, indexOfLastResult)
 
   const changePage = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -68,9 +68,9 @@ const Movies = () => {
         </select>
     </div>
     {error && <p>Error al consultar películas</p>}
-    {currentResults.length === 0 && <p className='mt-4'>No hay resultados para esta búsqueda.</p>}
+    {!error && currentResults.length === 0 && <p className='mt-4'>No hay resultados para esta búsqueda.</p>}
     <div className='container mx-auto px-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4'>
-    {currentResults.map(movie => (
+    {currentResults && currentResults.map(movie => (
       <div key={movie.id} className='mb-14 p-2 h-80 hover:opacity-75 rounded-lg hover:border-2 hover:border-gray flex justify-between items-center flex-col'>
         <div className='flex justify-center items-center h-full'>
         <img 

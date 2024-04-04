@@ -18,7 +18,7 @@ const Series = () => {
   const [resultsPerPage, setResultsPerPage] = useState(10);
   const indexOfLastResult = currentPage * resultsPerPage;
   const indexOfFirstResult = indexOfLastResult - resultsPerPage;
-  const currentResults = series.slice(indexOfFirstResult, indexOfLastResult)
+  const currentResults = series && series.slice(indexOfFirstResult, indexOfLastResult)
 
   const changePage = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -70,9 +70,9 @@ const Series = () => {
     </div>
     {loading && <Loader/>}
     {!loading && error && <p>Error al consultar series</p>}
-    {!loading && currentResults.length === 0 && <p className='mt-4'>No hay resultados para esta búsqueda.</p>}
+    {!error && currentResults.length === 0 && <p className='mt-4'>No hay resultados para esta búsqueda.</p>}
     <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-8'>
-    {currentResults.map(serie => (
+    {currentResults && currentResults.map(serie => (
       <div key={serie.id} className='p-2 h-80 hover:opacity-75 rounded-lg hover:border-2 hover:border-gray flex justify-between items-center flex-col'>
         <div className='flex justify-center items-center flex-col h-full'>
           <img src={serie.images['Poster Art'].url} onError={loadPlaceholderImage} className='w-auto max-h-[250px]'/>
