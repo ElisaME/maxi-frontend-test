@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className='container mx-auto text-left p-2 md:p-8'>
       <ol class="hidden md:flex py-2">
         <li>
-          <a href="#" >Home</a>
+          Home
         </li>
         <li>
           <span class="mx-2">|</span>
@@ -40,14 +40,14 @@ export const Footer = () => {
       <p className='py-2'>Copyright &#169; 2016 DEMO Streaming. All Rights Reserved</p>
       <div className='flex flex-col md:flex-row gap-2'>
         <div className='flex w-full md:w-1/6 md:justify-start justify-around'>
-          <img src='/social/facebook-white.svg' className='h-6 md:mr-4'/>
-          <img src='/social/twitter-white.svg' className='h-6 md:mr-4'/>
-          <img src='/social/instagram-white.svg' className='h-6 md:mr-4'/>
+          <img src='/social/facebook-white.svg' className='h-6 md:mr-4' alt='facebook-logo'/>
+          <img src='/social/twitter-white.svg' className='h-6 md:mr-4' alt='twitter-logo'/>
+          <img src='/social/instagram-white.svg' className='h-6 md:mr-4' alt='instagram-logo'/>
         </div>
         <div className='flex w-full md:w-full md:justify-end justify-around'>
-          <img src='/store/app-store.svg' className='h-8 md:ml-4'/>
-          <img src='/store/play-store.svg' className='h-8 md:ml-4'/>
-          <img src='/store/windows-store.svg' className='h-8 md:ml-4'/>
+          <img src='/store/app-store.svg' className='h-8 md:ml-4' alt='appStore'/>
+          <img src='/store/play-store.svg' className='h-8 md:ml-4' alt='playStore'/>
+          <img src='/store/windows-store.svg' className='h-8 md:ml-4' alt='windowsStore'/>
         </div>
       </div>
       </div>

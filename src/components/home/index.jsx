@@ -59,7 +59,7 @@ const Home = () => {
       <div className='mx-auto'>
         <Link to="/series">
           <CardContainter id="popular-series-card">
-            <img src="/series.png"/>
+            <img src="/series.png" alt='popularSeries'/>
             <p id="titleSeries">Popular<br></br>Series</p>
           </CardContainter>
         </Link>
@@ -67,7 +67,7 @@ const Home = () => {
       <div className='mx-auto'>
         <Link to="/movies">
           <CardContainter>
-            <img src="/movies.png"/>
+            <img src="/movies.png" alt='popularMovies'/>
             <p id="titleSeries">Popular<br></br>Movies</p>
           </CardContainter>
         </Link>
