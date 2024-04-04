@@ -9,6 +9,8 @@ const Pagination = (props) => {
     }
 
   return (
+    <div className='flex justify-center flex-col sm:flex-row gap-2 mb-2'>
+
     <div className='flex justify-center'>
         {pageNumbers.map(pageNumber => (
             <button
@@ -19,12 +21,14 @@ const Pagination = (props) => {
                 {pageNumber}
             </button>
         ))}
-        <select className='bg-gray-200 rounded-lg ml-2 px-1'
+        </div>
+        <select className='bg-gray-200 rounded-lg  px-1 w-2/3 sm:w-1/4 mx-auto sm:mx-0'
         value={resultsPerPage} onChange={(e) => setResults(e.target.value)}>
             <option value={5}>5 resultados por página</option>
             <option value={10}>10 resultados por página</option>
             <option value={20}>20 resultados por página</option>
         </select>
+    
     </div>
   )
 }
